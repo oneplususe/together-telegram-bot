@@ -100,3 +100,20 @@ bot.on("callback_query", (query) => {
     bot.sendMessage(chatId, "✅ Successfully verified! You can now use the bot. 🤖");
   }
 });
+// Baaki tumhara Telegram bot wala pura code upar hoga
+
+//----------------------------------------------
+// 👇 Ye lines LAST me add karo:
+
+import express from "express";  // Agar upar already hai to dobara mat likhna
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("✅ Bot is alive! — Hamza Khan");
+});
+
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
+});
